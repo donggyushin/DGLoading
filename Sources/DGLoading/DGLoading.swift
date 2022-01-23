@@ -14,6 +14,7 @@ open class DGLoading {
     }
     
     public func startLoading() {
+        stopLoading()
         guard let window = window else { return }
 
         if let customView = customView {
