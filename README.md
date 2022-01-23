@@ -28,13 +28,9 @@ pod 'DGLoading', :git => 'https://github.com/donggyushin/DGLoading'
 DGLoading.shared.startLoading()
 DGLoading.shared.stopLoading()
 
-// You can set any UIView you want to use.
-DGLoading.shared.customView = customView
+// When you want to use custom view instead of default indicator view
+let customDGLoading = DGLoading(customView)
+customDGLoading.startLoading()
+customDGLoading.stopLoading()
 ```
-
-## Properties
-
-| Properties  | Description | Default | Type |
-| ------------- | ------------- | ------------- | ------------- |
-| customView  | You can set any custom view you want to use  | nil | UIView |
 
