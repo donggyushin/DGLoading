@@ -28,6 +28,7 @@ open class DGLoading {
         }
         
         var indicator: UIActivityIndicatorView?
+        
         if #available(iOS 13, *) {
             indicator = .init(style: .medium)
         } else {
@@ -35,6 +36,7 @@ open class DGLoading {
         }
         
         guard let indicator = indicator else { return }
+        
         window.addSubview(indicator)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
