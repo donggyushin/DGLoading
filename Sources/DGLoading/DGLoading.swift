@@ -2,7 +2,7 @@ import UIKit
 
 open class DGLoading {
     public static let shared = DGLoading()
-    public var customView: UIView?
+    private var customView: UIView?
     private var window: UIWindow?
     
     private init() {
@@ -11,6 +11,11 @@ open class DGLoading {
         } else {
             window = UIApplication.shared.keyWindow
         }
+    }
+    
+    public convenience init(_ customView: UIView) {
+        self.init()
+        self.customView = customView
     }
     
     public func startLoading() {
